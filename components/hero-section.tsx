@@ -5,7 +5,10 @@ import { Button } from "./ui/button";
 
 export function HeroSection() {
   const scrollToFeatures = () => {
-    document.getElementById("features-section").scrollIntoView({ behavior: "smooth" });
+    const featuresSection = document.getElementById("features-section");
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (

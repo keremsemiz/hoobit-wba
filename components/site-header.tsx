@@ -7,9 +7,13 @@ import { Search, Menu } from "lucide-react";
 function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
+
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur border-none rounded-full py-5 px-4">

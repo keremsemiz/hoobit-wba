@@ -12,12 +12,31 @@ function CTASection() {
           Join Hoobit today and begin your journey with free, personalized Python tutoring designed to make learning simple and effective.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button onClick={() => document.getElementById("features-section").scrollIntoView({ behavior: "smooth" })} className="bg-sky-500 hover:bg-sky-400 text-white font-semibold h-12 px-8 rounded-lg transition-colors">
-            Start Learning for Free
-          </Button>
-          <Button onClick={() => document.getElementById("testimonials-section").scrollIntoView({ behavior: "smooth" })} variant="outline" className="text-black border-slate-600 hover:bg-slate-200 h-12 px-8 rounded-lg transition-colors">
-            See Testimonials
-          </Button>
+        <Button 
+          onClick={() => {
+            const featuresSection = document.getElementById("features-section");
+            if (featuresSection) {
+              featuresSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }} 
+          className="bg-sky-500 hover:bg-sky-400 text-white font-semibold h-12 px-8 rounded-lg transition-colors"
+        >
+          Start Learning for Free
+        </Button>
+
+        <Button 
+          onClick={() => {
+            const testimonialsSection = document.getElementById("testimonials-section");
+            if (testimonialsSection) {
+              testimonialsSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }} 
+          variant="outline" 
+          className="text-black border-slate-600 hover:bg-slate-200 h-12 px-8 rounded-lg transition-colors"
+        >
+          See Testimonials
+        </Button>
+
         </div>
       </div>
     </section>
